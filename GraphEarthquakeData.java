@@ -28,20 +28,29 @@ public class GraphEarthquakeData {
 
 
   public static void main(String[] args) throws Exception {
-    Bridges bridges = new Bridges(11, "BRIDGES_USER_ID", "BRIDGES_API_KEY");
+	// Create a Bridges object
+	  
+	// Get a DataSource object from Bridges
+	  
+    	// Set an assignment title 
+	bridges.setTitle("Earthquake Data Graph Lab");
+	bridges.setDescription("CMSC 256, Spring 2021");
+
+	// Initialize a Graph 
+	GraphAdjListSimple<String> graph = new GraphAdjListSimple<>();
+
 
     /* TODO:
-    * Initialize a Graph of your choice
     * Grab Earthquake data and store it in a List
+    * Sort the list by magnitude
     * Retain only 100 earthquakes of highest magnitude
     */
-    GraphAdjListSimple<String> graph = new GraphAdjListSimple<>();
 
     /* TODO:
     * Add the Earthquakes to the graph
     * Set each earthquake's location based on its latitude and longitude
     * ex: graph.getVisualizer(key).setLocation(earthquake.getLongit(), earthquake.getLatit());
-    * Tweak the colors or other visual elements if you wish
+    * Tweak the colors or other visual elements if you wish; For example, if the magnitude is higher than 6, set the color to red
     */
 
 
