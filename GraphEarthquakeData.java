@@ -25,7 +25,7 @@ public class GraphEarthquakeData {
   }
 
   public static void main(String[] args) throws Exception {
-    Bridges bridges = new Bridges(4, "BRIDGES_USER_ID", "BRIDGES_API_KEY");
+    Bridges bridges = new Bridges(11, "BRIDGES_USER_ID", "BRIDGES_API_KEY");
 
     /* TODO:
     * Initialize a Graph of your choice
