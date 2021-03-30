@@ -9,20 +9,23 @@ import java.util.List;
 
 public class GraphEarthquakeData {
 
-  public static double calcDistance(double la1, double lo1, double la2, double lo2) {
-    final int R = 6371; // Radius of the earth in km
-    // Haversine formula to calculate a value between 0 and 1 between 2 points
-    // on a sphere, 1 being the opposite side of the sphere
-    double laDistance = Math.toRadians(la2 - la1);
-    double loDistance = Math.toRadians(lo2 - lo1);
-    double a = Math.sin(laDistance / 2) * Math.sin(laDistance / 2)
-               + Math.cos(Math.toRadians(la1)) * Math.cos(Math.toRadians(la2))
-               * Math.sin(loDistance / 2) * Math.sin(loDistance / 2);
-    double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  public static double calcDistance(double latitude1, double longitude1, double latitude2, double longitude2) {
+		final int radius = 6371; // Radius of the earth in km
 
-    double distance = R * c;    //convert to km
-    return distance;
-  }
+		// Haversine formula to calculate a value between 0 and 1 between 2 points on a sphere,
+		//  1 being the opposite side of the sphere
+		double laDistance = Math.toRadians(latitude2 - latitude1);
+		double loDistance = Math.toRadians(longitude2 - longitude1);
+
+		double a = Math.sin(laDistance / 2) * Math.sin(laDistance / 2)
+				+ Math.cos(Math.toRadians(latitude1)) * Math.cos(Math.toRadians(latitude2))
+				* Math.sin(loDistance / 2) * Math.sin(loDistance / 2);
+		double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+		double distance = radius * c;    //convert to km
+		return distance;
+	}
+
 
   public static void main(String[] args) throws Exception {
     Bridges bridges = new Bridges(11, "BRIDGES_USER_ID", "BRIDGES_API_KEY");
