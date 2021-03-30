@@ -1,5 +1,5 @@
 package cmsc256;
-ea
+
 import bridges.base.*;
 import bridges.connect.Bridges;
 import bridges.data_src_dependent.EarthquakeUSGS;
