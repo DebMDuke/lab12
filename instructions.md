@@ -16,7 +16,7 @@ Grab recent earthquake data and build a graph representing the locations of the 
 **Basic**
 1. Open your scaffolded code.
 2. Plug in your credentials.
-3. Get the most recent 10,000 earthquakes. Only retain the 100 highest magnitude earthquakes.
+3. Get the most recent 5,000 earthquakes. Only retain the 100 highest magnitude earthquakes.
 
 **Place Earthquakes on the map**
 1. Create a graph where each earthquake is a vertex. Add no edges for now.
