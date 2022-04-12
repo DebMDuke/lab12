@@ -43,7 +43,7 @@ public class GraphEarthquakeData {
     /* TODO:
     * Grab Earthquake data and store it in a List
     * Sort the list by magnitude
-    * Retain only 100 earthquakes of highest magnitude
+    * Retain only 10 earthquakes of highest magnitude
     */
 
     /* TODO:
